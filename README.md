@@ -38,8 +38,6 @@ Usage
 	// way to go, but it gives a good example usage.
 	Meteor.methods({
 	    rdioCall: function(method, params) {
-	        if (!params) params = {};
-
 	        var user = Meteor.user();
 	        if (!user) return "No user";
 

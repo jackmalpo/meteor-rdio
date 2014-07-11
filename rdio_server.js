@@ -100,7 +100,6 @@ Rdio.prototype = {
     //                              see Rdio APIs docs for details.
     // @throws RdioError
     call: function(method, params) {
-        console.log("call", method, params);
         var paramsCopy = {};
         if (params) {
             for (var param in params) {
