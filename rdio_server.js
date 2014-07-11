@@ -1,7 +1,7 @@
-function Rdio(accessToken, accessTokenSecret) {
+Rdio = function Rdio(accessToken, accessTokenSecret) {
     this.accessToken = accessToken;
     this.accessTokenSecret = accessTokenSecret;
-}
+};
 
 // http://www.rdio.com/developers/docs/web-service/types/user/ref-web-service-type-user
 Rdio.whitelistedFields = ["icon250", "firstName", "baseIcon", "gender", "url", "icon500",
@@ -135,7 +135,6 @@ Rdio.prototype = {
         return config;
     }
 };
-
 
 
 
