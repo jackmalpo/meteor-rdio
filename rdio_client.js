@@ -14,9 +14,9 @@ Rdio.requestCredential = function (options, credentialRequestCompleteCallback) {
 
     var config = ServiceConfiguration.configurations.findOne({service: 'rdio'});
     if (!config) {
-        var conf = new ServiceConfiguration.ConfigError();
+        var configError = new ServiceConfiguration.ConfigError('rdio');
         if (credentialRequestCompleteCallback)
-            credentialRequestCompleteCallback(conf);
+            credentialRequestCompleteCallback(configError);
         return;
     }
 
