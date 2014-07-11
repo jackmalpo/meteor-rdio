@@ -1,0 +1,8 @@
+{
+      "name": "rdio",
+      "description": "Rdio OAuth1 and API client for use with Meteor Auth and API queries",
+      "homepage": "https://github.com/npaton/meteor-rdio",
+      "author": "Nicolas Paton <nicolas.paton@gmail.com>",
+      "version": "0.1.0",
+      "git": "https://github.com/npaton/meteor-rdio.git"
+}
