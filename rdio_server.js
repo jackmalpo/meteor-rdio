@@ -108,7 +108,7 @@ Rdio.prototype = {
         }
         paramsCopy.method = method;
         var response = this._oauthBinding().post('http://api.rdio.com/1/', paramsCopy);
-        console.log(response);
+
         if (response.statusCode !== 200) throw new RdioError();
         if (response.data.status.toLowerCase() !== 'ok') throw new RdioError();
 
