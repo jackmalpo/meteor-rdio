@@ -8,17 +8,17 @@ Rdio.whitelistedFields = ["icon250", "firstName", "baseIcon", "gender", "url", "
                             "key", "lastName", "libraryVersion", "isProtected", "icon"];
 
 Rdio.oauthUrls = {
-    requestToken: "http://api.rdio.com/oauth/request_token",
-    authorize: "https://www.rdio.com/oauth/authorize",
+    requestToken: "https://services.rdio.com/oauth2/token",
+    authorize: "https://www.rdio.com/oauth2/authorize",
     accessToken: "http://api.rdio.com/oauth/access_token",
-    authenticate: "https://www.rdio.com/oauth/authorize"
+    authenticate: "https://www.rdio.com/oauth2/authorize"
 };
 
 OAuth.registerService('rdio', 1, Rdio.oauthUrls, function(oauthBinding) {
 
     // http://www.rdio.com/developers/docs/web-service/methods/social/ref-currentuser
     var params = { "method": "currentUser" };
-    var rawResponse = oauthBinding.post('http://api.rdio.com/1/', params);
+    var rawResponse = oauthBinding.post('https://services.rdio.com/api/1/', params);
     var response = rawResponse.data;
 
     if (rawResponse.statusCode !== 200 ||
@@ -107,7 +107,7 @@ Rdio.prototype = {
             }
         }
         paramsCopy.method = method;
-        var response = this._oauthBinding().post('http://api.rdio.com/1/', paramsCopy);
+        var response = this._oauthBinding().post('https://services.rdio.com/api/1/', paramsCopy);
 
         if (response.statusCode !== 200) throw new RdioError();
         if (response.data.status.toLowerCase() !== 'ok') throw new RdioError();
@@ -177,4 +177,3 @@ OAuth1Binding.prototype._getAuthHeaderString = function(headers) {
         return self._encodeString(key) + '="' + self._encodeString(val) + '"';
     })).sort().join(', ');
 };
-

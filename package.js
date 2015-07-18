@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "OAuth and API client for the Rdio API"
+  summary: "OAuth2 and API client for the Rdio API"
 });
 
 Package.on_use(function(api) {
