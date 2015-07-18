@@ -4,5 +4,5 @@
       "homepage": "https://github.com/jackmalpo/meteor-rdio.git",
       "author": "Nicolas Paton <nicolas.paton@gmail.com>",
       "version": "0.1.3",
-      "git": "https://github.com/jackmalpo/meteor-rdio.git"
+      "git": "ssh://git@github.com:jackmalpo/meteor-rdio.git"
 }
